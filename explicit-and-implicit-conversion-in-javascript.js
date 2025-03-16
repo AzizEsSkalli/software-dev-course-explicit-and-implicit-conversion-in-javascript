@@ -18,15 +18,31 @@ Use console.log() to clearly show the before-and-after type conversions.
 
 */
 
+// Task 1: Debug the code :
 
 let result = "5" - 2;
 console.log("The result is: " + result);
 
 let isValid = Boolean("false");
 if (isValid) {
-    console.log("This is valid!");
+  console.log("This is valid!");
 }
 
-let age = "25";
-let totalAge = age + 5;
+let age = Number("25");   //We need to convert ("25") to a number, 
+let totalAge = age + 5;   //because the concatenation of string("25") + number(5) treat number 5 like a string.
 console.log("Total Age: " + totalAge);
+
+
+// Task 2: Examples of Type Conversion : 
+
+//  Example of implicit type conversion :
+let a = 25;
+let b = null;
+console.log(a * b); // the output : 0 (null is converted automatically to 0).
+
+// Example of explicit type conversion :
+
+let femaleCandidate = 17;
+let maleCandidate = Number("10"); // converting the string ("10") to number (10).
+let totalCandidate = femaleCandidate + maleCandidate;
+console.log(totalCandidate);
